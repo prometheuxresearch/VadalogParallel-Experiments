@@ -1,0 +1,8 @@
+@input("arc").
+@bind("arc","csv","disk/input/test","arc_test.csv").
+
+asp(X,Y,DM) :- arc(X,Y,D), DM = mmin(D).
+asp(X,Y,DM) :- asp(X,Y,D1), arc(Y,Z,D2), DM = mmin(D1+D2).
+
+@output("asp").
+@bind("asp","csv","disk/output/test","asp_arc_test_output").

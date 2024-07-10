@@ -1,0 +1,10 @@
+# to debug the grammar
+grun uk.co.prometheux.prometheuxreasoner.parser.Datalog rrule -gui <path_to_test_file>
+
+# generate a java parser with Maven (approach 1, main)
+mvn build
+# or
+mvn install
+
+# generate a java parser (approach 2, alternative)
+antlr4 -encoding UTF-8 -listener -visitor -package uk.co.prometheux.prometheuxreasoner.parser -o javaparser Datalog.g4

@@ -1,0 +1,15 @@
+@input("keyPerson").
+@bind("keyPerson","csv","disk/input/dbpedia","keyPerson-test.csv").
+@input("person").
+@bind("person","csv","disk/input/dbpedia","person_test.csv").
+@input("company").
+@bind("company","csv","disk/input/dbpedia","company_test.csv").
+@input("control").
+@bind("control","csv","disk/input/dbpedia","control_test.csv").
+
+psc(X,X,P) :- keyPerson(X,P), person(P).
+psc(X,X,P) :- company(X).
+psc(X,Z,P) :- control(Y,X), psc(Y,Z,P).
+
+@output("psc").
+@bind("psc","csv","disk/output/dbpedia","psc_test_output").

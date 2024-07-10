@@ -1,0 +1,8 @@
+@input("arc").
+@bind("arc","csv","disk/input/test","arc_test.csv").
+
+tc(X,Y) :- arc(X,Y).
+tc(X,Z) :- tc(X,Y), arc(Y,Z).
+
+@output("tc").
+@bind("tc","csv","disk/output/test","tc_arc_test_output").

@@ -1,0 +1,9 @@
+@input("edge").
+@bind("edge","csv","disk/input/test","arc_test.csv").
+
+odd(X,Y) :- edge(X,Y).
+even(X,Z) :- odd(X,Y), edge(Y,Z).
+odd(X,Z) :- even(X,Y), edge(Y,Z).
+
+@output("odd").
+@bind("odd","csv","disk/output/test","odd_arc_test_output").

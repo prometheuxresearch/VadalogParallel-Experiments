@@ -1,0 +1,10 @@
+# Eclipse
+.classpath
+.project
+.settings/
+.metadata/
+ 
+# Intellij
+.idea/
+*.iml
+*.iws

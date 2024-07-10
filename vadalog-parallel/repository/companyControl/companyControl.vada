@@ -1,0 +1,10 @@
+@input("own").
+@bind("own","csv","disk/input/companygraph","own_test1.csv").
+
+controlledShares(X,Y,Y,W) :- own(X,Y,W), X != Y.
+controlledShares(X,Z,Y,W) :- control(X,Y), own(Y,Z,W), X != Z.
+tControlledShares(X,Z,TW) :- controlledShares(X,Z,Y,W), TW = msum(W).
+control(X,Z) :- tControlledShares(X,Z,TW), TW > 0.5.
+
+@output("control").
+@bind("control","csv","disk/output/test","companyControl_own_test1_output").

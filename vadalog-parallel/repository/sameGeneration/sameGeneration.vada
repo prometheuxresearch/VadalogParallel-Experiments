@@ -1,0 +1,8 @@
+@input("arc").
+@bind("arc","csv","disk/input/realWorldGraphs","CA-GrQc.csv").
+
+sg(X,Y) :- arc(P,X), arc(P,Y), X != Y.
+sg(X,Y) :- arc(A,X), sg(A,B), arc(B,Y).
+
+@output("sg").
+@bind("sg","csv","disk/output/test","sg_arc_test_output").

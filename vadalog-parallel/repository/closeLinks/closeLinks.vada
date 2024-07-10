@@ -1,0 +1,9 @@
+@input("own").
+@bind("own","csv","disk/input/companygraph","own_test1.csv").
+
+mcl(X,Y,TW) :- own(X,Y,W), TW = msum(W).
+mcl(X,Z,TW) :- mcl(X,Y,W1), own(Y,Z,W2), TW = msum(W1*W2).
+cl(X,Y) :- mcl(X,Z,TW), TW >= 0.2.
+
+@output("cl").
+@bind("cl","csv","disk/output/test","closeLinks_own_test1_output").

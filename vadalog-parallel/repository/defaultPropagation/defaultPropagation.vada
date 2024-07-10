@@ -1,0 +1,13 @@
+@input("finEntity").
+@bind("finEntity","csv","disk/input/test","creditExposure-test.csv").
+@input("loan").
+@bind("loan","csv","disk/input/test","loan-test.csv").
+@input("security").
+@bind("security","csv","disk/input/test","security-test.csv").
+
+dflt(A,A,D) :- finEntity(A,P), P > 0.5.
+dflt(C,A,D2) :- dflt(B,A,D1), loan(B,C,LGD), LGD >= 0.5.
+dflt(C,A,D2) :- dflt(B,A,D1), security(B,C,S), S >= 0.3.
+
+@output("dflt").
+@bind("dflt","csv","disk/output/test","defaultPropagation_test_output").

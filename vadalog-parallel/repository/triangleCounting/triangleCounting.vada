@@ -1,0 +1,8 @@
+@input("arc").
+@bind("arc","csv","disk/input/test","arc_test.csv").
+
+t(X,Y,Z) :- arc(X,Y), arc(Y,Z), arc(Z,X), X < Y, Y < Z.
+count_t(C) :- t(X,Y,Z), C = mcount(1).
+
+@output("count_t").
+@bind("count_t","csv","disk/output/test","triangleCounting_arc_test_output").

@@ -1,0 +1,65 @@
+# Maven target directory
+/target/
+
+# Maven's local repository
+.m2/
+
+# Eclipse and IntelliJ IDEA project files
+.classpath
+.project
+.settings/
+.idea/
+*.iml
+*.iws
+
+# Logs
+*.log
+
+# OS generated files
+.DS_Store
+Thumbs.db
+
+# Temporary files
+*.tmp
+*.bak
+*.swp
+*.swo
+*.orig
+
+# Byte-compiled Python files
+*.pyc
+*.pyo
+__pycache__/
+
+# Python virtual environment
+venv/
+env/
+
+# PyCharm files
+*.idea/
+*.pydevproject
+
+# Node.js files (if applicable for scripts)
+node_modules/
+
+# Build directories (for Python or other scripts)
+build/
+dist/
+
+# Jupyter Notebook checkpoints
+.ipynb_checkpoints/
+
+# Common scripts logs and temporary files
+Common-scripts/*.log
+Common-scripts/*.tmp
+
+# Generated JAR files
+*.jar
+*.war
+*.ear
+
+# Sensitive configuration files
+*.conf
+*.key
+*.pem
+*.crt

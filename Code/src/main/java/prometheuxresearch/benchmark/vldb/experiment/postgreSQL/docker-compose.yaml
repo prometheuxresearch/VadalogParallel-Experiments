@@ -1,0 +1,13 @@
+version: '3.9'
+services:
+  postgres:
+    image: postgres:latest
+    container_name: my_postgres
+    environment:
+      POSTGRES_DB: mydb # Set the database name
+      POSTGRES_USER: myuser
+      POSTGRES_PASSWORD: mypassword
+    ports:
+      - "5432:5432" # Expose PostgreSQL on the host
+    volumes:
+      - ../../../../../../../test/resources/programs_data/test:/docker-entrypoint-initdb.d # Relative path to the CSV data

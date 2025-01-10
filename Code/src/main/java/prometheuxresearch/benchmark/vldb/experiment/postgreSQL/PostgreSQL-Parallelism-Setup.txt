@@ -1,0 +1,21 @@
+Database Configuration.
+
+Open the PostgreSQL configuration file (postgresql.conf) and adjust the following parameters:
+
+max_parallel_workers: This parameter sets the maximum number of parallel workers that can be used by the system.
+Increase this value to allow more parallel workers. For example:
+max_parallel_workers = 4
+
+max_parallel_workers_per_gather: This parameter controls the maximum number of parallel workers
+that can be used in a single query. Set it to a reasonable value. For example:
+max_parallel_workers_per_gather = 2
+
+max_worker_processes: Ensure that max_worker_processes is set to a value that allows
+for the number of parallel workers you plan to use.
+
+parallel_setup_cost and parallel_tuple_cost: These parameters influence the query planner's decisions
+regarding parallelism. Adjust these values to reflect the costs associated with parallel execution
+in your specific environment.
+
+After making changes to postgresql.conf, you'll need to restart the PostgreSQL server
+for the new configuration settings to take effect.

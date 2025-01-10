@@ -1,0 +1,14 @@
+chmod +x company_control.py
+python company_control.py --input_csv /docker-entrypoint-initdb.d/own_test1.csv --database mydb --user myuser --password mypassword --host localhost --port 5432
+
+chmod +x close_links.py
+python close_links.py --input_csv /docker-entrypoint-initdb.d/own_test1.csv --database mydb --user myuser --password mypassword --host localhost --port 5432
+
+chmod +x default_propagation.py
+python default_propagation.py --input_credit_exposure /docker-entrypoint-initdb.d/creditExposure-test.csv --input_loan /docker-entrypoint-initdb.d/loan-test.csv --input_security /docker-entrypoint-initdb.d/security-test.csv --database mydb --user myuser --password mypassword --host localhost --port 5432
+
+chmod +x psc.py
+python psc.py --input_person /docker-entrypoint-initdb.d/person_test.csv --input_keyperson /docker-entrypoint-initdb.d/keyPerson-test.csv --input_company /docker-entrypoint-initdb.d/company_test.csv --input_control /docker-entrypoint-initdb.d/control_test.csv --database mydb --user myuser --password mypassword --host localhost --port 5432
+
+chmod +x strong_links.py
+python strong_links.py --input_person /docker-entrypoint-initdb.d/person_test.csv --input_keyperson /docker-entrypoint-initdb.d/keyPerson-test.csv --input_company /docker-entrypoint-initdb.d/company_test.csv --input_control /docker-entrypoint-initdb.d/control_test.csv --database mydb --user myuser --password mypassword --host localhost --port 5432

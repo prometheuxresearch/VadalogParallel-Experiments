@@ -1,0 +1,4 @@
+# to watch available commands
+python3 /home/ubuntu/experiments/VadalogParallel-Experiments/Common-scripts/launcher.py --platforms_file /home/ubuntu/experiments/VadalogParallel-Experiments/Common-scripts/platforms.conf --jobs_file /home/ubuntu/experiments/VadalogParallel-Experiments/Common-scripts/jobs.conf --log_file /home/ubuntu/experiments/VadalogParallel-Experiments/Common-scripts/log.txt --to_run False
+# to run commands and write results on the log
+python3 /home/ubuntu/experiments/VadalogParallel-Experiments/Common-scripts/launcher.py --platforms_file /home/ubuntu/experiments/VadalogParallel-Experiments/Common-scripts/platforms.conf --jobs_file /home/ubuntu/experiments/VadalogParallel-Experiments/Common-scripts/jobs.conf --log_file /home/ubuntu/experiments/VadalogParallel-Experiments/Common-scripts/log.txt --to_run False

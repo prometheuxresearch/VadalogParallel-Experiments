@@ -1,6 +1,8 @@
 # Vadalog Parallel Experiments
 
-This repository contains the material and instructions to reproduce the experiments presented in the VLDB paper on the **Vadalog Parallel System: Distributed Reasoning with Datalog+/-**. If you require a production license for the Vadalog Parallel system, please contact [davben@prometheux.co.uk](mailto:davben@prometheux.co.uk).
+This repository contains the material and instructions to reproduce the experiments presented in the VLDB paper on **The Vadalog Parallel System: Distributed Reasoning with Datalog+/-** available [here](https://www.vldb.org/pvldb/vol17/p4614-benedetto.pdf).
+
+If you require a production license for the Vadalog Parallel system, please contact [davben@prometheux.co.uk](mailto:davben@prometheux.co.uk).
 
 ---
 
